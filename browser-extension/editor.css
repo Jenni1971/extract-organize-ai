@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+  overflow: hidden;
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #2a2a2a;
+  border-bottom: 1px solid #3a3a3a;
+  flex-shrink: 0;
+}
+
+.tool-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+  border-right: 1px solid #3a3a3a;
+}
+
+.tool-group:last-child {
+  border-right: none;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.tool-btn, .action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #aaa;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tool-btn:hover, .action-btn:hover {
+  background: #3a3a3a;
+  color: #fff;
+}
+
+.tool-btn.active {
+  background: #4a9eff;
+  color: #fff;
+}
+
+.action-btn.secondary, .action-btn.primary {
+  width: auto;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.action-btn.secondary {
+  color: #aaa;
+}
+
+.action-btn.primary {
+  background: #4a9eff;
+  color: #fff;
+}
+
+.action-btn.primary:hover {
+  background: #3a8eef;
+}
+
+#colorPicker {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #3a3a3a;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+}
+
+#sizePicker {
+  width: 80px;
+  height: 6px;
+  cursor: pointer;
+}
+
+.canvas-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  background: #1a1a1a;
+  padding: 20px;
+}
+
+#annotationCanvas {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  cursor: crosshair;
+}
+
+#annotationCanvas.text-cursor {
+  cursor: text;
+}
+
+#annotationCanvas.select-cursor {
+  cursor: default;
+}
+
+.text-input {
+  position: absolute;
+  border: 2px solid #4a9eff;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-size: 16px;
+  padding: 4px 8px;
+  outline: none;
+  min-width: 100px;
+  resize: none;
+  font-family: inherit;
+}

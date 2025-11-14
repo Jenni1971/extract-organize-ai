@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #0F1020;
+    --card: #1C1F2E;
+    --text: #F4F6FF;
+    --text-muted: #A7AEC1;
+    --accent1: #6C5CE7;
+    --accent2: #00C2FF;
+    
+    --radius: 16px;
+    --radius-chip: 20px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html, body {
+    @apply overflow-x-hidden;
+  }
+
+  body {
+    @apply bg-[#0F1020] text-[#F4F6FF];
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+
+  h1 {
+    @apply text-[34px] font-bold;
+  }
+
+  h2 {
+    @apply text-[24px] font-semibold;
+  }
+
+  h3 {
+    @apply text-[18px] font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-muted {
+    color: var(--text-muted);
+  }
+  
+  .bg-card {
+    background-color: var(--card);
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+}
